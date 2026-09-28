@@ -1,0 +1,14 @@
+[package]
+name = "md2html"
+version = "0.1.0"
+edition = "2021"
+description = "Convert Markdown to a self-contained, print-ready HTML document"
+license = "MIT"
+repository = "https://github.com/rbritton3468/md2html"
+
+[dependencies]
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+
+[profile.release]
+lto = true
+strip = true
